@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnCheck = findViewById(R.id.buttonCheck);
         tvShow = findViewById(R.id.textViewShow);
         cbEnabled.setChecked(true);
-        
+
         btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     tvShow.setText("The discount is not given.");
                 }
+                Toast.makeText(MainActivity.this,"Button Click",
+                        Toast.LENGTH_LONG).show();
 
 
             }
